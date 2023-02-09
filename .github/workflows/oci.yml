@@ -14,7 +14,7 @@ on:
   workflow_dispatch:
       
 jobs:
-  my-instances:
+  tenancy-namespace:
     runs-on: ubuntu-latest
     name: Show tenancy namespace 
     env:
