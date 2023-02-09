@@ -1,3 +1,14 @@
+name: OCI test CI/CD
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [opened, synchronize, reopened, closed]
+    branches:
+      - main
+      
 jobs:
   my-instances:
     runs-on: ubuntu-latest
