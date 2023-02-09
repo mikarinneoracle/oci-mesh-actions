@@ -25,7 +25,7 @@ jobs:
       OCI_CLI_REGION: ${{ secrets.OCI_CLI_REGION }}
     steps:
       - name: Show namespace
-        uses: oracle-actions/run-oci-cli-command@v1.1
+        uses: oracle-actions/run-oci-cli-command@v1.1.1
         id: show-namespace
         with:
           command: 'os ns get'
