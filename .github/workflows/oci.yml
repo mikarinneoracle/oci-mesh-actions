@@ -29,4 +29,3 @@ jobs:
         id: show-namespace
         with:
           command: 'os ns get'
-          silent: 'false'
