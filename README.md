@@ -21,6 +21,7 @@ that we are using in OCI Cloud Shell plus the vars that are required for the Kub
         <li><b>OCI_CLI_KEY_CONTENT</b></li>
         <li><b>OCI_CLI_REGION</b></li>
     </ul>
+    <br>
     <li>Vars required for the CI/CD part:</li>
     <ul>
         <li><b>MESH_NAME</b>: name of the OCI Service Mesh (instance) e.g. <i>pricing</i>i></li>
