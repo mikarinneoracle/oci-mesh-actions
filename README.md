@@ -1,19 +1,19 @@
 ## OCI Service Mesh microservices rebuild and redeploy example with GitHub Actions
 
-This repo is an extension to the <code><a href="https://github.com/mikarinneoracle/oci-service-mesh/blob/main/README.md">OCI Service Mesh demo / example</a></code> that shows how to rebuild and redeploy the meshed microservices (CI/CD) with GitHub actions.
+This repo is an extension to the <code><a href="https://github.com/mikarinneoracle/oci-service-mesh/blob/main/README.md">OCI Service Mesh demo / example</a></code> that shows how to rebuild and redeploy the meshed microservices (CI/CD) with GitHub actions. This is using the <b>same scripts</b> without any modifications/optimizations.
 
 <p>
 To run this example, first setup the OCI Service Mesh according to the steps in the repo above in <code>OCI Cloud Shell</code>. Then, you can setup and run this action by forking it.
 
 <p>
-This example uses the <code><a href="https://github.com/marketplace/actions/configure-kubectl-for-oracle-container-engine-for-kubernetes-oke">Configure Kubectl for Oracle Container Engine for Kubernetes (OKE) Action</a></code> by Oracle
+This example uses the <code><a href="https://github.com/marketplace/actions/configure-kubectl-for-oracle-container-engine-for-kubernetes-oke">Configure Kubectl for Oracle Container Engine for Kubernetes (OKE) action</a></code> by Oracle
     
 <p>
 Multiple <code>secrets</code> are required to run this action. Basically the are the same vars (secrets) for the action
 that we are using in OCI Cloud Shell plus the vars that are required for the Kubectl action:
     
 <ul>
-    <li>Kubectl Action required secrets (see for details in Kubectl Action docs):</li>
+    <li>Kubectl action required secrets (see for details in Kubectl action docs):</li>
     <ul>
         <li><b>OCI_CLI_USER</b></li>
         <li><b>OCI_CLI_TENANCY</b></li>
