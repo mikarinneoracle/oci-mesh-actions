@@ -48,9 +48,9 @@ jobs:
       - name: Login to OCIR
         uses: docker/login-action@v2
         with:
-          registry: ${ocir}
-          username: ${docker_username}
-          password: ${docker_password}
+          registry: ${{ secrets.OCIR }}
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
           
       - name: Get API SDK
         run: sh copy_api.sh ${pricing_api_name}
