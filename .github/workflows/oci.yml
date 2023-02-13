@@ -31,7 +31,6 @@ jobs:
       docker_password: ${{ secrets.DOCKER_PASSWORD }}
       dbname: ${{ secrets.DBNAME }} 
       dbpassword: ${{ secrets.DBPASSWORD }}
-      pricing_api_name: ${{ secrets.PRICING_API_NAME }}
     steps:
       - uses: actions/checkout@v3
         with:
@@ -51,9 +50,6 @@ jobs:
           registry: ${{ secrets.DOCKER_SERVER }}
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-          
-      - name: Get API SDK
-        run: sh copy_api.sh ${pricing_api_name}
           
       - name: Build microservices
         run: sh build_services.sh ${dbname} ${dbpassword}
