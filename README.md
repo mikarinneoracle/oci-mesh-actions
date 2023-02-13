@@ -32,6 +32,6 @@ that we are using in OCI Cloud Shell plus the vars that are required for the Kub
         <li><b>DOCKER_PASSWORD</b>: ocir login password (token)</li>
         <li><b>DBNAME</b>: ATP database instance name e.g. <i>pricingdb</i></li>
         <li><b>DBPASSWORD</b>: ATP database instance password</li>
-        <li><b>PRICING_API_NAME</b>: Pricing API SDK name in OCI API Gateway (optional), if not given, a local copy in the repo is used e.e. <i>pricing</i></li>
+        <li><b>PRICING_API_NAME</b>: Pricing API SDK name in OCI API Gateway (optional) - when not given a local copy in the repo is used instead, e.g. <i>pricing</i></li>
     </ul>
 </ul>
