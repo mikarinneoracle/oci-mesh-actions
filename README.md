@@ -27,7 +27,7 @@ that we are using in OCI Cloud Shell plus the vars that are required for the Kub
     <ul>
         <li><b>DOCKER_SERVER</b>: ocir in the region e.g. <i>ams.ocir.io</i></li>
         <li><b>DOCKER_USERNAME</b>: ocir login username</li>
-        <li><b>DOCKER_PASSWORD: ocir login password (token)</b></li>
+        <li><b>DOCKER_PASSWORD</b>: ocir login password (token)</li>
     </ul>
     <br>
     <li>Secrets required for the CI/CD part:</li>
