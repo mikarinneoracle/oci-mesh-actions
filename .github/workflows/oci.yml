@@ -28,9 +28,10 @@ jobs:
         with:
           submodules: true
           
-      - name: create OKE cluster access
-        uses: oracle-actions/run-oci-cli-command@v1.1.1
+      - name: Configure Kubectl
+        uses: oracle-actions/configure-kubectl-oke@v1.3.1
         with:
-          #command: 'ce cluster create-kubeconfig --cluster-id ${{ secrets.OKE_CLUSTER_OCID }} --file $HOME/.kube/config --region ${{ secrets.OKE_REGION }} --token-version 2.0.0  --kube-endpoint PUBLIC_ENDPOINT'
-          command: 'os ns get'
-          silent: false
+          cluster: ${{ secrets.OKE_CLUSTER_OCID }}
+
+      - name: Run Kubectl
+        run: kubectl get pods -n pricingmesh
