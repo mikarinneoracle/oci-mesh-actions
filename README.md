@@ -24,14 +24,14 @@ that we are using in OCI Cloud Shell plus the vars that are required for the Kub
     <br>
     <li>Vars required for the CI/CD part:</li>
     <ul>
-        <li><b>MESH_NAME</b>: name of the OCI Service Mesh (instance) e.g. <i>pricing</i>i></li>
+        <li><b>MESH_NAME</b>: name of the OCI Service Mesh (instance) e.g. <i>pricing</i></li>
         <li><b>MESH_COMPARTMENT_OCID</b>: the compartment containing the Mesh instance (on OKE cluster) and API SDK (optional)</li>
         <li><b>DNS_DOMAIN</b>: dns name for the Mesh e.g. <i>mymesh.mysite.com</i></li>
-        <li><b>OCIR</b>: ocir region/tenancy namespace e.g. <i>ams.ocir.io/frsxwtjslf75</i>i></li>
+        <li><b>OCIR</b>: ocir region/tenancy namespace e.g. <i>ams.ocir.io/frsxwtjslf75</i></li>
         <li><b>DOCKER_USERNAME</b>: ocir login username</li>
         <li><b>DOCKER_PASSWORD</b>: ocir login password (token)</li>
-        <li><b>DBNAME</b>: ATP database instance name e.g. <i>pricingdb</i>i></li>
+        <li><b>DBNAME</b>: ATP database instance name e.g. <i>pricingdb</i></li>
         <li><b>DBPASSWORD</b>: ATP database instance password</li>
-        <li><b>PRICING_API_NAME</b>: Pricing API SDK name in OCI API Gateway (optional), if not given, a local copy in the repo is used e.e. <i>pricing</i>i></li>
+        <li><b>PRICING_API_NAME</b>: Pricing API SDK name in OCI API Gateway (optional), if not given, a local copy in the repo is used e.e. <i>pricing</i></li>
     </ul>
 </ul>
