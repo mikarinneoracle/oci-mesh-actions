@@ -48,7 +48,7 @@ jobs:
       - name: Docker login
         run: docker login ${ocir} -u ${docker_username} -p ${docker_password}
           
-      - name: Get pricing API SDK
+      - name: Get API SDK
         run: sh copy_api.sh ${pricing_api_name}
           
       - name: Build microservices
@@ -59,7 +59,7 @@ jobs:
           kubectl delete deployment home-v1 -n ${mesh_name}
           kubectl delete deployment home-v2 -n ${mesh_name}
           kubectl delete deployment price-v1 -n ${mesh_name}
-          sleep 10
+          sleep 5
           kubectl get pods -n ${mesh_name}
       
       - name: Deploy microservices
