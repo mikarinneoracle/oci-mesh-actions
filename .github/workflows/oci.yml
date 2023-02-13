@@ -63,8 +63,8 @@ jobs:
           kubectl delete deployment home-v1 -n ${mesh_name}
           kubectl delete deployment home-v2 -n ${mesh_name}
           kubectl delete deployment price-v1 -n ${mesh_name}
-          # Sleep a few seconds before microservices re-deployment in the next step
-          sleep 5
+          # Sleep 10 seconds before microservices re-deployment in the next step
+          sleep 10
       
       - name: Deploy microservices
         run: sh deploy_services.sh
