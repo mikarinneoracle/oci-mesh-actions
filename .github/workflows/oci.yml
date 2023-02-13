@@ -59,6 +59,8 @@ jobs:
           kubectl delete deployment home-v1 -n ${mesh_name}
           kubectl delete deployment home-v2 -n ${mesh_name}
           kubectl delete deployment price-v1 -n ${mesh_name}
+          sleep 10
+          kubectl get pods -n ${mesh_name}
       
       - name: Deploy microservices
         run: sh deploy_services.sh
