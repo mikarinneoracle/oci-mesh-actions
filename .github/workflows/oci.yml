@@ -31,10 +31,9 @@ jobs:
       - name: create OKE cluster access
         uses: oracle-actions/run-oci-cli-command@v1.1.1
         with:
-          command: 'oci ce cluster create-kubeconfig --cluster-id ${{ secrets.OKE_CLUSTER_OCID }} --file kconfig --region ${{ secrets.OKE_REGION }} --token-version 2.0.0  --kube-endpoint PUBLIC_ENDPOINT'
+          command: 'oci ce cluster create-kubeconfig --cluster-id ${{ secrets.OKE_CLUSTER_OCID }} --region ${{ secrets.OKE_REGION }} --token-version 2.0.0  --kube-endpoint PUBLIC_ENDPOINT'
           silent: false
           
       - run: |
-        export KUBECONFIG="kconfig"
         kubectl get nodes
         
