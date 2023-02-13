@@ -48,7 +48,7 @@ jobs:
       - name: Docker login
         run: docker login ${ocir} -u ${docker_username} -p ${docker_password}
           
-      - name: Get instantclient
+      - name: Get pricing API SDK
         run: sh copy_api.sh ${pricing_api_name}
           
       - name: Build microservices
