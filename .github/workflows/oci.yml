@@ -32,5 +32,4 @@ jobs:
         uses: oracle-actions/run-oci-cli-command@v1.1.1
         with:
           command: 'oci ce cluster create-kubeconfig --cluster-id ${{ secrets.OKE_CLUSTER_OCID }} --region ${{ secrets.OKE_REGION }} --token-version 2.0.0  --kube-endpoint PUBLIC_ENDPOINT'
-          silent: false
         
