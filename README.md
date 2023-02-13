@@ -36,8 +36,8 @@ that we are using in OCI Cloud Shell plus the vars that are required for the Kub
         <li><b>MESH_COMPARTMENT_OCID</b>: the compartment containing the Mesh instance (on OKE cluster)</li>
         <li><b>DNS_DOMAIN</b>: dns name for the Mesh e.g. <i>mymesh.mysite.com</i></li>
         <li><b>OCIR</b>: ocir in the region/tenancy namespace e.g. <i>ams.ocir.io/frsxwtjslf75</i></li>
-        <li><b>DOCKER_USERNAME</b>: ocir login username</li>
-        <li><b>DOCKER_PASSWORD</b>: ocir login password (token)</li>
+        <li><b>DOCKER_USERNAME</b>: ocir login username <i>(same as in docker-login)</i></li>
+        <li><b>DOCKER_PASSWORD</b>: ocir login password (token) <i>(same as in docker-login)</i></li>
         <li><b>DBNAME</b>: ATP database instance name e.g. <i>pricingdb</i></li>
         <li><b>DBPASSWORD</b>: ATP database instance password</li>
     </ul>
