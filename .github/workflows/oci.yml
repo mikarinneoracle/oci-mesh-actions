@@ -24,6 +24,7 @@ jobs:
       OCI_CLI_KEY_CONTENT: ${{ secrets.OCI_CLI_KEY_CONTENT }}
       OCI_CLI_REGION: ${{ secrets.OCI_CLI_REGION }}
       mesh_name: ${{ secrets.MESH_NAME }}
+      mesh_compartment: ${{ secrets.MESH_COMPARTMENT_OCID }}
       dns_domain: ${{ secrets.DNS_DOMAIN }}
       ocir: ${{ secrets.OCIR }}
       docker_username: ${{ secrets.DOCKER_USERNAME }}
@@ -50,7 +51,7 @@ jobs:
       - name: Get instantclient
         run: sh copy_api.sh ${pricing_api_name}
           
-      - name: Get instantclient
+      - name: Build microservices
         run: sh build_services.sh ${dbname} ${dbpassword}
         
       - name: Delete deployments
@@ -59,6 +60,6 @@ jobs:
           kubectl delete deployment home-v2 -n ${mesh_name}
           kubectl delete deployment price-v1 -n ${mesh_name}
       
-      - name: Deploy services
+      - name: Deploy microservices
         run: sh deploy_services.sh
         
