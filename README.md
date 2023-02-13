@@ -9,7 +9,7 @@ To run this example, first setup the OCI Service Mesh according to the steps in 
 This example uses the <code><a href="https://github.com/marketplace/actions/configure-kubectl-for-oracle-container-engine-for-kubernetes-oke">Configure Kubectl for Oracle Container Engine for Kubernetes (OKE) Action</a></code> by Oracle
     
 <p>
-Multiple Action secrets are required to run this action. Basically the are the same vars (secrets) for the action
+Multiple <code>secrets</code> are required to run this action. Basically the are the same vars (secrets) for the action
 that we are using in OCI Cloud Shell plus the vars that are required for the Kubectl action:
     
 <ul>
@@ -22,7 +22,7 @@ that we are using in OCI Cloud Shell plus the vars that are required for the Kub
         <li><b>OCI_CLI_REGION</b></li>
     </ul>
     <br>
-    <li>Vars required for the CI/CD part:</li>
+    <li>Secrets required for the CI/CD part:</li>
     <ul>
         <li><b>MESH_NAME</b>: name of the OCI Service Mesh (instance) e.g. <i>pricing</i></li>
         <li><b>MESH_COMPARTMENT_OCID</b>: the compartment containing the Mesh instance (on OKE cluster) and API SDK (optional)</li>
