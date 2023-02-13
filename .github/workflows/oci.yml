@@ -16,7 +16,7 @@ on:
 jobs:
   tenancy-namespace:
     runs-on: ubuntu-latest
-    name: Show tenancy namespace 
+    name: Build and redeploy 
     env:
       OCI_CLI_USER: ${{ secrets.OCI_CLI_USER }}
       OCI_CLI_TENANCY: ${{ secrets.OCI_CLI_TENANCY }}
@@ -24,9 +24,17 @@ jobs:
       OCI_CLI_KEY_CONTENT: ${{ secrets.OCI_CLI_KEY_CONTENT }}
       OCI_CLI_REGION: ${{ secrets.OCI_CLI_REGION }}
     steps:
-      - name: Show namespace
-        uses: oracle-actions/run-oci-cli-command@v1.1.1
-        id: show-namespace
+      - uses: actions/checkout@v3
         with:
-          command: 'os ns get'
+          submodules: true
+          
+      - name: create OKE cluster access
+        uses: oracle-actions/run-oci-cli-command@v1.1.1
+        with:
+          command: 'oci ce cluster create-kubeconfig --cluster-id ${{ secrets.OKE_CLUSTER_OCID }} --file kconfig --region ${{ secrets.OKE_REGION }} --token-version 2.0.0  --kube-endpoint PUBLIC_ENDPOINT'
           silent: false
+          
+      - run: |
+        export KUBECONFIG="kconfig"
+        kubectl get nodes
+        
