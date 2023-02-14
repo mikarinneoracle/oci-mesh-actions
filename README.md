@@ -1,6 +1,6 @@
 ## OCI Service Mesh microservices rebuild and redeploy example with GitHub Actions
 
-This repo is an extension to the <code><a href="https://github.com/mikarinneoracle/oci-service-mesh/blob/main/README.md">OCI Service Mesh demo / example</a></code> that shows how to rebuild and redeploy the meshed microservices (CI/CD) with GitHub actions. This is using the <b>same scripts</b> without any modifications/optimizations.
+This repo is an extension to the <code><a href="https://github.com/mikarinneoracle/oci-service-mesh/blob/main/README.md">OCI Service Mesh demo / example</a></code> and shows how to rebuild and redeploy the meshed microservices (CI/CD) with GitHub actions. This is using the <b>same scripts</b> as previously without any modifications/optimizations, just calling them from GitHub actions this time instead of using OCI Cloud Shell or OCI DevOps.
 
 <p>
 To run this example, first setup the OCI Service Mesh according to the steps in the repo above in <code>OCI Cloud Shell</code>. Then, you can setup and run this action by forking it.
@@ -11,7 +11,7 @@ It also uses <code><a href="https://github.com/marketplace/actions/docker-login"
     
 <p>
 Multiple <code>secrets</code> are required to run this action. Basically the are the same vars (secrets) for the action
-that we are using in OCI Cloud Shell plus the vars that are required for the Kubectl action:
+that we are using in OCI Cloud Shell plus the vars that are required for the Kubectl action and Docker-login action:
     
 <ul>
     <li>Kubectl action required secrets (see for details in Kubectl action docs):</li>
