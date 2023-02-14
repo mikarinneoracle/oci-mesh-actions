@@ -10,7 +10,7 @@ This example uses the <code><a href="https://github.com/marketplace/actions/conf
 It also uses <code><a href="https://github.com/marketplace/actions/docker-login">https://github.com/marketplace/actions/docker-login action</a></code> to login to OCIR.
     
 <p>
-Multiple <code>secrets</code> are required to run this action. Basically the are the same vars (secrets) for the action
+Multiple <code>secrets</code> are required to run this example. Basically the are the same vars (secrets) for the action
 that we are using in OCI Cloud Shell plus the vars that are required for the Kubectl action and Docker-login action:
     
 <ul>
