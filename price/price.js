@@ -86,7 +86,6 @@ async function queryPrice(tier) {
     const row = result.rows[0];
     const tierOptions = await queryOptions(tier, connection);
     var json = { 'price' : {'monthly' : JSON.stringify(row.PRICE_MO), 'storage' : JSON.stringify(row.STORAGE), 'users' : JSON.stringify(row.USERS), 'support' : JSON.stringify(row.SUPPORT).replace(/['"]+/g, '') }, options : tierOptions };
-    writeQ(tier);
     return json;
   } catch (err) {
     console.error(err);
